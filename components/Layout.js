@@ -6,10 +6,8 @@ const Layout = ({ children }) => {
       <Head>
         <title>Recipe Viewer</title>
       </Head>
-      <body>
-        {children}
-        <footer>&copy; {new Date().getFullYear()}</footer>
-      </body>
+      {children}
+      <footer>&copy; {new Date().getFullYear()}</footer>
       <style jsx>
         {`
           body {
@@ -26,7 +24,7 @@ const Layout = ({ children }) => {
             margin: 0;
           }
 
-          div.root {
+          .root {
             margin: 100px auto;
             width: 80%;
             height: auto;
@@ -56,29 +54,6 @@ const Layout = ({ children }) => {
 
           footer p a:hover {
             color: pink;
-          }
-
-          .cards {
-            display: flex;
-            justify-content: space-around;
-          }
-
-          .card-item {
-            background: #eeeeee;
-            width: 30%;
-            display: flex;
-            flex-direction: column;
-            text-align: left;
-          }
-
-          .card-item img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-          }
-
-          .card-item span {
-            margin: 1em;
           }
 
           /* RECEPIE PAGE */
@@ -114,13 +89,6 @@ const Layout = ({ children }) => {
           }
 
           @media only screen and (max-width: 768px) {
-            .cards {
-              display: block;
-            }
-            .card-item {
-              width: 100%;
-            }
-
             .recipie-top {
               display: block;
             }
